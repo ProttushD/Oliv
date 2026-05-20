@@ -1,0 +1,1454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffff;
+}
+
+span {
+    padding: 2px 4px;
+    border-radius: 50px;
+
+    background-color: #edded5;
+}
+
+/* 
+h1 {
+    font-family: sans-serif;
+} */
+
+.main .nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    border-bottom: .5px solid #dadada;
+
+}
+
+.main .nav .n-left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.main .nav .n-left .logo {
+    width: 50%;
+    height: 100%;
+}
+
+.main .nav .n-left .logo img {
+    width: 100px;
+}
+
+.main .nav .hr-btn {
+    padding: 5px 10px;
+    background-color: #edded5;
+    border-radius: 50px;
+}
+
+.main .nav .n-right {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main .nav .n-right .nr-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    align-items: center;
+
+}
+
+.main .nav .n-right .nr-list h5 {
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+
+
+}
+
+.main .nav .n-right .nr-list h5::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    transition: all ease 0.3s;
+}
+
+.main .nav .n-right .nr-list h5:hover::after {
+    cursor: pointer;
+    width: 100%;
+
+
+}
+
+
+
+
+.main .nav .n-right .nr-git-btn {
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease .3s;
+
+}
+
+.main .nav .n-right .nr-git-btn:hover {
+    color: #fff;
+
+}
+
+
+
+.main .nav .n-right .nr-git-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    transition: all ease .3s;
+    z-index: -1;
+
+
+}
+
+.main .nav .n-right .nr-git-btn:hover::after {
+    width: 100%;
+
+
+
+
+}
+
+
+section {
+    padding: 5% 10%;
+}
+
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 100px);
+
+}
+
+.hero-section .hs-heading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 50px 0;
+}
+
+.hero-section .hs-heading h1 {
+    font-size: 95px;
+    font-family: sans-serif;
+    font-weight: 300;
+
+}
+
+.hero-section .hs-heading h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.hero-section .hs-btn {
+    width: 150px;
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease .3s;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 1px solid transparent;
+    margin-top: 20px;
+
+}
+
+.hero-section .hs-btn:hover {
+    color: #000;
+    transition: all ease .3s;
+    border-radius: 50px;
+    border: 1px solid #000;
+}
+
+.hero-section .hs-btn::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    z-index: -2;
+    background-color: #fff;
+    position: absolute;
+    transition: all ease .3s;
+    top: 0;
+    left: 0;
+}
+
+.hero-section .hs-btn:hover::after {
+    width: 100%;
+}
+
+
+
+.card-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.card-section .strip {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-section .strip .strip-track {
+    display: flex;
+    width: max-content;
+    /* animation: animate 10s linear infinite; */
+    animation-name: animate;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.card-section .strip .strip-card {
+    margin-right: 50px;
+}
+
+@keyframes animate {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+.card-section .strip .strip-card {
+    width: 15%;
+    height: 100%;
+}
+
+.card-section .strip .strip-card img {
+    width: 170px;
+
+}
+
+.card-section .card {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-section .card .cards {
+    width: 24%;
+    min-height: 350px;
+    background-color: #f4f4f5;
+    padding: 5% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.card-section .card .cards h5 {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.card-section .card .cards p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.card-section .card .cards .card-bottom p {
+    text-decoration: underline;
+}
+
+.card-section .card .cards .card-head {
+    width: 100%;
+    height: 20%;
+}
+
+.card-section .card .cards .card-body {
+    width: 100%;
+    height: 60%;
+}
+
+.card-section .card .cards .card-bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+
+.product-section {
+    width: 100%;
+    height: 100%;
+}
+
+
+.product-section .product-top-head {
+    width: 100%;
+    padding: 2% 0;
+
+}
+
+.product-section .product-top-head h5 {
+    font-size: 15px;
+    font-weight: 200;
+
+}
+
+.product-section .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+}
+
+.product-section .product-head {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.product-section .product-head h5 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.product-section .product-head .ph-btn {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.product-section .product-head .ph-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+
+
+}
+
+.product-section .product-head .ph-btn:hover {
+    color: #fff;
+}
+
+.product-section .product-head .ph-btn:hover::after {
+    width: 100%;
+}
+
+
+.product-section .product {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.product-section .products .product-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.product-section .products .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform ease 0.5s;
+}
+
+.product-section .products .product-image:hover img {
+    transform: scale(1.1);
+}
+
+.product-section .products .product-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 0;
+}
+
+.product-section .products .product-bottom .pb-left {
+    font-size: 20px;
+}
+
+.product-section .products .product-bottom .pb-right {
+    padding: 5px 15px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.product-section .products .product-bottom .pb-right::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.product-section .products .product-bottom .pb-right:hover {
+    color: #fff;
+}
+
+
+.product-section .products .product-bottom .pb-right:hover::after {
+    width: 100%;
+}
+
+
+
+.card-section {
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-section .card-top-head {
+    width: 100%;
+    padding: 2% 0;
+
+}
+
+.card-section .card-top-head h5 {
+    font-size: 15px;
+    font-weight: 200;
+
+}
+
+.card-section .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+}
+
+.cs-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 5% 0;
+}
+
+.cs-card .cards {
+    width: 100%;
+    height: 400px;
+    padding: 20% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cs-card .cards .cs-btn {
+    padding: 15px 15px;
+    border: 1px solid transparent;
+    background-color: #000;
+    color: #fff;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+
+    transition: all ease 0.3s;
+}
+
+.cs-card .cards .cs-btn:hover {
+    color: #000;
+}
+
+
+.cs-card .cards .cs-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all ease 0.3s;
+
+}
+
+.cs-card .cards .cs-btn:hover::after {
+    width: 100%;
+}
+
+/* custom css class for size and balance production Start*/
+
+.fs-12 {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.fs-15 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.fs-25 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+.fs-18 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+
+.fs-20 {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+
+.c1 {
+    background-color: #f1f5f9;
+}
+
+.c2 {
+    background-color: #f1f6f5;
+}
+
+.c3 {
+    background-color: #f8f8f8;
+}
+
+.c4 {
+    background-color: #f8ede3;
+}
+
+.c5 {
+    background-color: #fffae7;
+}
+
+.tac {
+    text-align: center;
+}
+
+/* custom css class for size and balance production End*/
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 0 30%;
+
+}
+
+
+.content h5 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+
+.content .discription {
+    display: flex;
+    line-height: 25px;
+    gap: 30px;
+}
+
+.content .discription p {
+    font-size: 18px;
+    text-align: justify;
+    color: #52525d;
+}
+
+
+
+.our-team {
+    width: 100%;
+    height: 100%;
+}
+
+
+.our-team .ot-top-head {
+    width: 100%;
+    padding: 2% 0;
+
+}
+
+.our-team .ot-top-head h5 {
+    font-size: 15px;
+    font-weight: 200;
+
+}
+
+.our-team .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+}
+
+.our-team .ot-head {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.our-team .ot-head h5 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.our-team .ot-head .ot-btn {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.our-team .ot-head .ot-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+
+
+}
+
+.our-team .ot-head .ot-btn:hover {
+    color: #fff;
+}
+
+.our-team .ot-head .ot-btn:hover::after {
+    width: 100%;
+}
+
+
+.ot-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 3%;
+
+}
+
+.ot-cards {
+    width: 100%;
+    height: 430px;
+
+}
+
+.ot-fc {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+
+.ot-cards .ot-t-btn {
+    padding: 10px 5px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+}
+
+.ot-cards .ot-t-btn:hover {
+    color: #000000;
+}
+
+.ot-cards .ot-t-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background-color: #ffffff;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.ot-cards .ot-t-btn:hover::after {
+    width: 100%;
+}
+
+
+
+
+.ot-cards .image {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ot-cards .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform ease 0.5s;
+}
+
+
+.ot-cards .image .social {
+    position: absolute;
+    bottom: 20px;
+    left: 60%;
+    transform: translateX(-50%) translateY(80px);
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.ot-cards .image .social i {
+    width: 42px;
+    height: 42px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+
+.ot-cards .image .social i:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.ot-cards:hover .social {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.ot-card-footer {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ot-card-footer h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ot-card-footer .ot-btn {
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ot-card-footer .ot-btn:hover {
+    color: #fff;
+}
+
+.ot-card-footer .ot-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.ot-card-footer .ot-btn:hover::after {
+    width: 100%;
+}
+
+.new-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.new-content .nc-top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+
+}
+
+.new-content .nc-top .nct-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+
+
+}
+
+.new-content .nc-top .nct-center {
+    width: 20%;
+    height: 100%;
+    display: flex;
+
+
+}
+
+.new-content .nc-top .nct-center img {
+    width: 160px;
+
+}
+
+.new-content .nc-top .nct-right {
+    width: 50%;
+    height: 100%;
+
+}
+
+.new-content .nc-top .nct-right h5 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 400;
+
+}
+
+.new-content .nc-top .nct-right p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: 400;
+
+}
+
+.new-content .nc-top .nct-right p:nth-last-child(1) {
+
+    margin-bottom: 60px;
+
+
+}
+
+.new-content .line {
+    width: 70%;
+    height: 1px;
+    background-color: #e4e4e7;
+}
+
+
+
+.new-content .nc-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+
+}
+
+.new-content .nc-bottom .ncb-left {
+    width: 30%;
+    height: 100%;
+
+}
+
+.new-content .nc-bottom .ncb-center {
+    width: 20%;
+    height: 100%;
+    margin-top: 60px;
+
+}
+
+.new-content .nc-bottom .ncb-center img {
+    width: 150px;
+
+}
+
+.new-content .nc-bottom .ncb-right {
+    width: 50%;
+    height: 100%;
+
+}
+
+.new-content .nc-bottom .ncb-right h5 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-weight: 400;
+
+}
+
+.new-content .nc-bottom .ncb-right p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: 400;
+
+}
+
+
+.contact-us {
+    width: 100%;
+    height: 100%;
+
+}
+
+.contact-us .con-box {
+    width: 100%;
+    height: 100%;
+    background-color: #f1f6f5;
+    display: flex;
+    padding: 10%;
+
+}
+
+
+.contact-us .con-box .cb-left {
+    width: 20%;
+    height: 100%;
+
+
+}
+
+.contact-us .con-box .cb-right {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+
+}
+
+
+.contact-us .con-box .cb-right h5 {
+    font-size: 60px;
+    font-weight: 400;
+
+
+
+}
+
+.contact-us .con-box .cb-right p {
+    font-size: 25px;
+    font-weight: 400;
+
+
+}
+
+
+.contact-us .con-box .cb-right .cb-btn {
+    padding: 15px 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid transparent;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all ease 0.3s;
+}
+
+.contact-us .con-box .cb-right .cb-btn:hover {
+    color: #000;
+}
+
+.contact-us .con-box .cb-right .cb-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 0%;
+    height: 100%;
+    /* border: 1px solid #000000; */
+    z-index: -1;
+    transition: all ease 0.3s;
+    border-radius: 50px;
+}
+
+.contact-us .con-box .cb-right .cb-btn:hover::after {
+    width: 100%;
+}
+
+
+
+
+.blog {
+    width: 100%;
+    height: 100%;
+}
+
+.blog .blog-top-head {
+    width: 100%;
+    padding: 2% 0;
+
+}
+
+.blog .blog-top-head h5 {
+    font-size: 15px;
+    font-weight: 200;
+
+}
+
+.blog .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+}
+
+.blog .blog-head {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.blog .blog-head h5 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.blog .blog-head .blog-btn {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.blog .blog-head .blog-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all ease 0.3s;
+    top: 0;
+    left: 0;
+
+
+}
+
+.blog .blog-head .blog-btn:hover {
+    color: #fff;
+}
+
+.blog .blog-head .blog-btn:hover::after {
+    width: 100%;
+}
+
+.blog .blog-card {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 20px;
+}
+
+.blog .blog-card .blog-cards {
+    width: 400px;
+    height: 600px;
+}
+
+.blog .blog-card .blog-cards .blog-card-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.blog .blog-card .blog-cards .blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 1s;
+}
+
+.blog .blog-card .blog-cards .blog-card-image img:hover {
+    transform: scale(1.2);
+}
+
+.blog .blog-card .blog-cards .blog-card-image .blog-card-discription {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+}
+
+.blog .blog-card .blog-cards .blog-card-discription h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.blog .blog-card .blog-cards .blog-card-discription p {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 14px;
+
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.blog .blog-card .blog-cards .blog-card-discription p::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease 0.3s;
+}
+
+.blog .blog-card .blog-cards .blog-card-discription p:hover::after {
+
+    width: 100%;
+
+}
+
+
+.footer {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.footer .f-card {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 20px;
+
+
+
+}
+
+.footer .f-card .f-cards {
+    width: 25%;
+    height: 100%;
+
+}
+
+.footer .f-card .f-cards {
+    width: 25%;
+    height: 100%;
+
+
+}
+
+.footer .f-card .f-cards .fc-header {
+    width: 100%;
+    height: 30%;
+    padding: 15px 0;
+
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+}
+
+
+
+
+
+.footer .f-card .f-cards .image {
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.footer .f-card .f-cards .image img {
+    width: 100px;
+}
+
+
+.footer .f-card .f-cards .fc-social {
+    display: flex;
+    gap: 20px;
+    
+
+}
+
+.footer .f-card .f-cards .fc-social .cir {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.footer .f-card .f-cards .fc-social .cir:hover {
+   cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+.footer .f-card .f-cards .fc-body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.footer .f-card .f-cards .fc-body {
+    width: 100%;
+    height: 80%;
+    padding: 15px 0;
+
+}
+
+.footer .f-card .f-cards .fc-body h5 {
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.footer .f-card .f-cards .fc-body h5::after {
+    width: 0%;
+    height: 1px;
+    content: "";
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease 0.3s;
+
+}
+
+.footer .f-card .f-cards .fc-body h5:hover::after {
+    width: 100%;
+}
+
+.footer .f-card .f-cards .fc-btn {
+    padding: 10px 15px;
+    background-color: #000;
+    border: 1px solid #000;
+    width: 150px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.footer .f-card .f-cards .fc-btn:hover {
+    color: #000000;
+}
+
+.footer .f-card .f-cards .fc-btn::after {
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all ease 0.3s;
+
+}
+
+.footer .f-card .f-cards .fc-btn:hover::after {
+    width: 100%;
+}
+
+
+.footer-bottom{
+    width: 100%;
+    display: flex;
+   padding: 2% 10%;
+   justify-content: space-between;
+   color: #9f9fa9;
+   
+}
+
+.footer-bottom .fb-left strong{
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.footer-bottom h5{
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+
+.footer-bottom .fb-right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    
+}
+
+
+.footer-bottom .fb-right h5{
+    cursor: pointer;
+}
+
+.footer-bottom .fb-right h5:hover{
+    color: #000;
+}
